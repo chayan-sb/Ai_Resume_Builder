@@ -42,6 +42,7 @@ function Summery({enabledNext}) {
                 summery:summery
             }
         }
+        console.log(data);
         GlobalApi.UpdateResumeDetail(params?.resumeId,data).then(resp=>{
             console.log(resp);
             enabledNext(true);
@@ -49,6 +50,7 @@ function Summery({enabledNext}) {
             toast("Details updated")
         },(error)=>{
             setLoading(false);
+            console.log(error);
         })
     }
     return (
